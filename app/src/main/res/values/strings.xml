@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MyApp</string>
     <string name="my_string"> My string </string>
+    <string name="welcome_message">Привет Context, %s! Ваш ID:6 %d</string>
 </resources>
