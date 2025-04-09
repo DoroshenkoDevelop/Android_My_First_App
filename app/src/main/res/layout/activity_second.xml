@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="1">  <!-- Общий вес (100%) -->
+
+    <!-- TextView (70%) -->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:text="Текст (70%)"
+        android:background="#FF5722"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:padding="16dp"/>
+
+    <!-- Button (30%) -->
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:background="#3F51B5"
+        android:text="Кнопка (30%)"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

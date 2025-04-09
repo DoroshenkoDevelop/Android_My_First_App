@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">MyApp</string>
-    <string name="my_string"> My string </string>
+    <string name="my_first_string"> My first string </string>
+    <!-- <string name="my_second_string"> My second string </string>
+    <string name="my_third_string"> My third string </string>
+    <string name="my_button"> My button </string>-->
 </resources>

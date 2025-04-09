@@ -5,16 +5,62 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/firstTextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/my_first_string"
+        />
+
+    <TextView
+        android:id="@+id/secondTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/firstTextview"
+        app:layout_constraintEnd_toEndOf="@+id/firstTextview"
+        app:layout_constraintStart_toStartOf="@+id/firstTextview"
+        android:text="@string/my_first_string"
+        />
+
+    <EditText
+        android:id="@+id/buttonTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/my_first_string"
+        app:layout_constraintEnd_toEndOf="@+id/firstTextview"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/firstTextview"
+        app:layout_constraintTop_toBottomOf="@+id/firstTextview" />
+
+    <EditText
+        android:id="@+id/inputTextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:hint="Вводи сюда"
+        android:inputType="textCapWords"
+        app:layout_constraintEnd_toEndOf="@+id/firstTextview"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="@+id/firstTextview"
+        app:layout_constraintTop_toBottomOf="@+id/firstTextview" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_first_string"
+        app:layout_constraintTop_toBottomOf="@+id/firstTextview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="200dp"
+        style="@style/CustomButton"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
