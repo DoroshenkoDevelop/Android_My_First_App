@@ -5,7 +5,6 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,5 +34,25 @@ class MainActivity : AppCompatActivity() {
         /*Задача 3: Замена одного фрагмента на другой (replace)
                 Задание: В MainActivity есть два фрагмента (FragmentA, FragmentB). При нажатии
                 на кнопку заменяй FragmentA на FragmentB*/
+
+
+        /*Задача 4: Передача данных между фрагментами (Bundle)
+        Задание: Передай строку "Data from Activity" из Activity в Fragment.*/
+
+        val bundle = Bundle().apply {
+            putString("KEY_DATA", "Data from Activity")
+        }
+
+
+        val fragmentA = AFragment().apply {
+            arguments = bundle
+        }
+
+        supportFragmentManager.beginTransaction()
+            .add(R.id.fragment_container, fragmentA)
+            .commit()
     }
+    /*Задача 4: Передача данных между фрагментами (Bundle)
+            Задание: Передай строку "Data from Activity" из Activity в Fragment.*/
+
 }
