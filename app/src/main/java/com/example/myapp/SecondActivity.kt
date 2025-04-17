@@ -1,23 +1,24 @@
 package com.example.myapp
 
-import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 
-
-
-class MainActivity : AppCompatActivity() {
+class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        /*Задача 1: Запуск новой Activity с передачей данных через Intent
-        Открыть SecondActivity из MainActivity, передав строку "Hello, Second Activity!"*/
-        val intent = Intent(this, SecondActivity::class.java).apply {
-            putExtra("EXTRA_MESSAGE", "Hello, Second Activity!")
-        }
-        startActivity(intent)
-        /*Задача 1: Запуск новой Activity с передачей данных через Intent
-        Открыть SecondActivity из MainActivity, передав строку "Hello, Second Activity!"*/
 
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_second)
+        /*Задача 1: Запуск новой Activity с передачей данных через Intent
+        Открыть SecondActivity из MainActivity, передав строку "Hello, Second Activity!"*/
+        val message = intent.getStringExtra("EXTRA_MESSAGE") ?: "Default text"
+        val textView = findViewById<TextView>(R.id.textView)
+        textView.text = message
+        /*Задача 1: Запуск новой Activity с передачей данных через Intent
+        Открыть SecondActivity из MainActivity, передав строку "Hello, Second Activity!"*/
     }
 }
