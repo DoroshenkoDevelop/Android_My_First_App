@@ -8,7 +8,6 @@ import com.example.myapp.model.Book
 
 class BookAdapter(private val onClick: (String) -> Unit) :
     RecyclerView.Adapter<BookAdapter.ViewHolder>() {
-
     private var books = emptyList<Book>()
 
     inner class ViewHolder(val binding: ItemBookBinding) :

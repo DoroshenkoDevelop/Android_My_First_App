@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         setupRecyclerView()
         loadBooks()
     }
-
     private fun setupRecyclerView() {
         adapter = BookAdapter { bookId ->
             loadBookDetails(bookId)
@@ -32,7 +31,6 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
     }
-
     private fun loadBooks() {
         lifecycleScope.launch {
             try {
@@ -43,7 +41,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
     private fun loadBookDetails(id: String) {
         lifecycleScope.launch {
             try {
@@ -54,7 +51,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
     private fun showBookDetails(book: VolumeInfo) {
         AlertDialog.Builder(this)
             .setTitle(book.title)
